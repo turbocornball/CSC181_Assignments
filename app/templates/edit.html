@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Student</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+<body>
+	<div class="row mt-1">
+		<div class="col text-center">
+			<h1>Edit Information</h1>
+		</div>
+	</div>
+	<div class="row mt-1" style="height: 200px">
+		<div class="col-md-3"></div>
+
+		<div class="col-md-6">
+			<div class="container">
+				<a href="/" class="btn btn-primary mb-2">Back</a>
+				<div class="card">
+					<form method="POST" action="/editinfo">
+						<div class="card">
+							<div class="card-body">
+								  <div class="form-group">
+								    <label>ID Number</label>
+                                    <input type="text" value="{{ ID }}" class="form-control" name="id_number" placeholder="e.g. 2018-0001" required>
+                                    <input type="hidden" value="{{ ID }}" class="form-control" name="old_id_number" placeholder="e.g. 2018-0001" required>
+								  </div>
+								  <div class="form-group">
+								    <label>First Name</label>
+								    <input type="text" value="{{ First }}" class="form-control" name="first_name" placeholder="e.g.Angela" required>
+								  </div>
+								  <div class="form-group">
+								    <label>Last Name</label>
+								    <input type="text" value="{{ Last }}" class="form-control" name="last_name" placeholder="e.g. Manginsay" required>
+								  </div>
+								  <div class="form-group">
+								    <label>Course</label>
+								    <input type="text" value="{{ Course }}" class="form-control" name="course" placeholder="e.g. CS" required>
+								  </div>
+								  
+
+							</div>
+							<div class="card-footer text-right">
+								<input type="submit" name="submit" class="btn btn-success" value="Submit">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		<div class="col-md-3"></div>
+<!-- 		<div class="col-4" style="background-color:yellow;"></div> -->
+	</div>
+	
+</body>
+</html>
