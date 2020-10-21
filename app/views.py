@@ -33,7 +33,7 @@ def Savedetails():
 		course = request.form["course"]
 		cur.execute("INSERT into student_data(id_number, first_name, last_name, course) values (?,?,?,?)" , (id_number, first_name, last_name, course))
 		con.commit()
-		return render_template("success.html", msg = msg)
+		return render_template("success.html")
 
 @server.route("/delete/<id>")
 def Delete(id):
